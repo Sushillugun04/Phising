@@ -1,0 +1,267 @@
+
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  heigt:100%;
+    background-color: #f4f4f4;
+}
+header .h-2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 45px;
+}
+
+header .h-2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Main section styles */
+main {
+    padding: 60px 20px 20px;
+}
+
+.update-section {
+    text-align: ;
+    margin-bottom: 20px;
+}
+
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Social buttons styles */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-buttons button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-buttons h6 {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Comment popup styles */
+.comment-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-comment {
+    cursor: pointer;
+}
+
+/* Redeem buttons styles */
+.redeem-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-61, .button-85 {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.button-61 img, .button-85 img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.button-61:hover, .button-85:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relativ;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Image slider */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    /* Set the height to ensure it fits the images */
+    height: 400px; /* Adjust as needed */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    animation: slideAnimation 15s infinite; /* Apply the animation */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes up 100% of the container width */
+    box-sizing: border-box; /* Ensure padding/margin don't affect the width */
+}
+
+.slide img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-slider {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .comment-popup {
+        width: 90%;
+    }
+}
+
+
